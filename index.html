@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		li{
+			list-style-type: none;
+		}
+		.clear{
+			clear: both;
+		}
+		#page{
+			width: 1300px;
+			margin : auto;
+			border : 0px solid #bbbbbb;
+		}
+		header{
+			width: 1300px;
+			height: 100px;
+			margin-top: 10px;
+			border: 1px solid #FFFFFF;
+		
+		}
+		nav{
+			width: 1300px;
+			height: 10px;
+			margin-top: 10px;
+		}
+		nav li{
+			display: inline-block;
+			margin: 20px 30px;
+		}
+		section{
+			float:left;
+			margin-top: 55px;
+			border: 1px solid #ffffff;
+		}
+		aside{
+			float: right;
+		
+		}
+		aside li{
+			float: : right;
+			margin-top: 100px;
+			margin-bottom: 10px;
+
+		}
+		footer{
+			float: left;
+			width: 1300px;
+			height: 100px;
+			margin: 10px 0 10px 0;
+			border : 1px solid #ffffff;
+		}
+
+		#menu{ position: fixed; top: 200px; left: 50%; margin-left: 700px; width: 10px; height: 10px; 
+
+		}
+
+		#address{
+			float: left;
+			margin : 50px 0 0 10px;
+		}
+		#customer{
+			float: right;
+			margin : 50px 0 0 10px;
+		}
+		#search{
+			padding-left: 100px;
+			margin-top: 25px;
+		}
+		#search-ranking{
+			position: absolute;
+			top: 35px;
+			right: 550px;
+			width: 198px;
+			height: 20px;
+		}
+		#search-ranking:hover ul{
+            display: inline-block;
+		}
+		#search-ranking ul {
+			display: none;
+			list-style: none;
+			padding: 17px;
+			margin: 0;
+			width: 200px;
+			height: 230px;
+			border: 1px solid #aaa;
+			background: white;
+			position: absolute;
+			top: -15px;
+			right: 0;
+		}
+		#menu ul{
+			position: absolute;
+		}
+		#menu img:hover {
+			transform: scale(1.1);
+		}
+
+		#logo{
+			float: left;
+			margin-top: 10px;
+		}
+		#top{
+			float: right;
+			margin: 30px 20px 0 0;
+		}
+		#sub1{
+		}
+		#sub1 img:hover{
+			box-shadow: 5px 5px 10px gray;
+			transform: translate(5px, -5px);
+		}
+		#sub1 li{
+			display: inline-block;
+			text-align: center;
+			padding-right: 0px;
+			margin-left: 50px;
+		}
+		#sub1-1 li{
+			display: inline-block;
+			padding-right: 50px;
+			margin-left: 50px;
+			border-radius: 50%
+			background-color: #ffffff;
+			
+		}
+		#sub1-1  li:hover{
+			transform: scale(1.1);
+			transition: transform 1s;
+	    }
+
+	    #sub1-1 a:hover{
+	    	background-color: blue;
+	    }
+
+        }
+
+		#sub2 img{
+			width: 60px;
+			height: 60px;
+			border-radius: 50% 50%
+		}
+		#sub2 li{
+			display: inline-block;
+			padding-right: 20px;
+			text-align: center;
+			width: 160px;
+		}
+		#sub2 img:hover{
+			transform: scale(1.1);
+		}
+		
+		#sub3 li{
+			display: inline-block;
+			overflow: hidden;  
+			text-align: center;
+			padding-right: 40px;
+			margin-left: 30px;
+		}
+		#sub3 img{
+			width: 250px;
+			height: 180px;
+			display: block;
+		}
+		#sub3 img:hover{
+			transform: scale(1.1);
+			transition: transform 1s;
+		}
+		#gg{
+			text-decoration: none;
+			color: black;
+		}
+	</style>
+</head>
+<body id="page">
+	<header>
+		<div id="logo">
+		<img src="./img/img01.PNG">
+	</div>
+	<div id="top">
+		로그인 ㅣ 회원가입 ㅣ <span id="gg"><a href="index202.html">마이페이지</a></span> ㅣ 고객센터
+	</div>
+	 <div id="search" style="display: flex;flex-direction: row;text-align: right">
+        <img id='image_search' src="https://3.bp.blogspot.com/-2CWX7kIpob4/WZgVXt3yTQI/AAAAAAAAACM/N1eGT1OD7rklb4GtsadoxYRyWZoR_aI0gCLcBGAs/s1600/seo-1970475_960_720.png" style="width: 50px;
+        height: 50px;
+        margin-right: 30px;" onclick="var inputBox = document.getElementById('input_text_search');
+        inputBox.style.width = '200px';
+        inputBox.style.paddingLeft='3px';
+        inputBox.value='';
+        inputBox.focus();">
+        <input id='input_text_search' type="text" onblur="this.style.width='0px';
+               this.style.paddingLeft='0px';" style="  border: none;
+               background-color: rgba(0,0,0,0);
+               color: #666666;
+                border-bottom: solid 2px #333;
+                outline: none;
+                width: 0px;
+                transition: all 0.5s;" onkeydown="if(event.keyCode==13){alert(this.value);}">
+    </div>
+    <div id="search-ranking">
+    	<h2 class="blind">실시간 검색어</h2>
+    	<div>
+    	<span id="rank-number">1</span>
+    	<span id="rank-title">코로나19</span>
+        </div>
+    	<ul>
+    		<li>
+    			<span class="" ="rank-number">1</span>
+    			<a href="https://www.cdc.go.kr/board.es?mid=a20501000000&bid=0015&act=view&list_no=367803" target="_blank">코로나19</a>
+    		</li>
+    		<li>
+    			<span class="" ="rank-number">2</span>
+    			<span class="rank-title">메르스</span>
+    		</li>
+    		<li>
+    			<span class="" ="rank-number">3</span>
+    			<span class="rank-title">자가격리</span>
+    		</li>
+    		<li>
+    			<span class="" ="rank-number">4</span>
+    			<span class="rank-title">코로나19예방수칙</span>
+    		</li>
+    		<li>
+    			<span class="" ="rank-number">5</span>
+    			<span class="rank-title">손씻기</span>
+    		</li>
+    		<li>
+    			<span class="" ="rank-number">6</span>
+    			<span class="rank-title">대응지침</span>
+    		</li>
+    		<li>
+    			<span class="" ="rank-number">7</span>
+    			<span class="rank-title">마스크</span>
+    		</li>
+    		<li>
+    			<span class="" ="rank-number">8</span>
+    			<span class="rank-title">포스터</span>
+    		</li>
+    		<li>
+    			<span class="" ="rank-number">9</span>
+    			<span class="rank-title">방역</span>
+    		</li>
+    		<li>
+    			<span class="" ="rank-number">10</span>
+    			<span class="rank-title">사회적거리두기</span>
+    		</li>
+    	</ul>
+    </div>
+	</header>
+	<div class="clear"></div>
+	<nav>
+		<ul>
+			<li>감염병</li>
+			<li>건강정책</li>
+			<a href="http://www.cdc.go.kr/contents.es?mid=a20301020100">정책정보</a>
+			<li>연구개발</li>
+			<li>알림.자료</li>
+			<li>간행물.통계</li>
+			<li>민원.정보공개</li>
+			<li>기관소개</li>
+			<li>사업별홈페이지</li>
+		</ul>
+	</nav>
+	<div class="clear"></div>
+	<section>
+		<a href="http://ncov.mohw.go.kr/"><img src="./img/img02.PNG" width="1300
+	">
+	</section>
+	<aside>
+		<div id="menu">
+		<ul>
+			<li>
+				<img src="./img/img13_1.png" width="70">
+			</li>
+			<li>
+				<img src="./img/img14_1.png" width="70">
+			</li>
+			<li>
+				<img src="./img/img15_1.png" width="70">
+			</li>
+		</ul>
+	</div>
+	</aside>
+	<section>
+		<ul id="sub1">
+			<li>
+			 <img src="./img/img03.PNG" width="250"> <br> 온열질환 건강수칙
+		    </li>
+		    <li> 
+			<img src="./img/img04.PNG" width="250"> <br> 비브리오패혈증 예방수칙
+		    </li>
+		    <li> 
+			<img src="./img/img05.PNG" width="250"> <br> 미세먼지 건강수칙
+		    </li>
+		    <li> 
+			<img src="./img/img06.PNG" width="250"> <br> 코로나19 영상자료
+		    </li>
+		</ul>
+	</section>
+	<section>
+		<ul id="sub1-1">
+			<li><img src="./img/img20.jpg"></li>
+			<li><a href="https://www.facebook.com/koreacdcpr"><img src="./img/img20_1.png"></li>
+			<li><a href="https://twitter.com/KoreaCDC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="./img/img20_2.png"></li>
+			<li><a href="https://post.naver.com/my.nhn?memberNo=20182790"><img src="./img/img20_3.png"></li>
+			<li><a href="https://www.youtube.com/channel/UCa7-3Zvxg-5Rfxgu3RQY_gw"><img src="./img/img20_4.png"></li>
+		</ul>
+	</section>
+	<section>
+		<ul id="sub2">
+			<li><img src="./img/img19.jpg"></li>
+			<li><img src="./img/img07.PNG"><br>국가별 질병정보</li>
+			<li><img src="./img/img08.PNG"><br>홍보자료</li>
+			<li><img src="./img/img09.PNG"><br>이달의 건강정보</li>
+			<li><img src="./img/img10.PNG"><br>조직도직원검색</li>
+			<li><img src="./img/img11.jpg"><br>법령.지침.서식</li>
+			<li><img src="./img/img12.jpg"><br>공고/공시</li>
+		</ul>
+	</section>
+	<section id="sub3">
+		<li><img src="./img/img13.PNG"><br>진짜 힘은 손 씻을 때 생긴다!</li>
+		<li><img src="./img/img14.PNG"><br>중동지역을 방문하셨나요?</li>
+		<li><img src="./img/img15.PNG"><br>기침예절을 지켜요!</li>
+		<li><img src="./img/img16.PNG"><br>1339 질병관리본부 콜센터</li>
+	</section>
+	<footer>
+		<div id="address">
+			<img src="./img/img17.PNG">
+		</div>
+		<div id="customer">
+			<img src="./img/img18.PNG">
+		</div>
+	</footer>
+</body>
+</html>
